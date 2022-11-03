@@ -10,11 +10,12 @@ public class Lugar {
 
     //CONSTRUCTOR
 
-    public Lugar() {
-
-
+    public Lugar() {}
+    public Lugar(String direccion, String hora, int aforo, String barrio) {
+        this.direccion = direccion;
+        this.hora = hora;
+        this.aforo = aforo;
+        this.barrio = barrio;
     }
-
-
-    //METODOS
+//METODOS
 }
