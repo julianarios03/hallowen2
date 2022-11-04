@@ -1,0 +1,84 @@
+public class Main {
+
+
+    public static void main(String[] args) {
+
+        //CREANDO UN OBJETO DE LA CLASE SCANNER
+        Scanner entradaPorTeclado=new Scanner(System.in);
+
+        Invitado objetoInvitado = new Invitado();
+
+        Lugar objetoLugar = new Lugar();
+        Fiesta objetoFiesta = new Fiesta();
+        //Invitado objetoInvitado=new Invitado("Santiago", "Misas", 28, "1152693454", true, 25000, 'A');
+
+        // DEFINIENDO COSTOS
+        System.out.println("******    FIESTA     ******");
+
+        System.out.println("1. Costo de alimentos  :");
+        double costosAlimentos=entradaPorTeclado.nextDouble();
+        if (costosAlimentos>0) {objetoFiesta.costosAlimentos=costosAlimentos;}
+        else {System.out.println("Ingrese un valor mayor a 0");}
+        System.out.println("El costo de alimentos es: "+objetoFiesta.costosAlimentos);
+
+        System.out.println("2. Costo de Bebidas  :");
+        double costosBebidas=entradaPorTeclado.nextDouble();
+        if (costosBebidas>0) {objetoFiesta.costosBebidas=costosBebidas;}
+        else {System.out.println("Ingrese un valor mayor a 0");}
+        System.out.println("El costo de bebidas es: "+objetoFiesta.costosBebidas);
+
+        System.out.println("3. Costo de Lugar  :");
+        double costosLugar=entradaPorTeclado.nextDouble();
+        if (costosLugar>0) {objetoFiesta.costosLugar=costosLugar;}
+        else {System.out.println("Ingrese un valor mayor a 0");}
+        System.out.println("El costo de Lugar es: "+objetoFiesta.costosLugar);
+
+        System.out.println("4. Costo de Equipos  :");
+        double costosEquipos=entradaPorTeclado.nextDouble();
+        if (costosEquipos>0) {objetoFiesta.costosEquipos=costosEquipos;}
+        else {System.out.println("Ingrese un valor mayor a 0");}
+        System.out.println("El costo de equipos es: \n"+objetoFiesta.costosEquipos);
+
+        System.out.println("**************************");
+        System.out.println("el costo total de la fiesta es de :"+objetoFiesta.sumarCostos());
+
+        //RECIBIENDO DATOS DE LOS INVITADOS
+        System.out.println("Bienvenido a nuestra fiesta:");
+        System.out.println("*********************");
+
+        System.out.println("1.Documento del invitado:");
+        objetoInvitado.id=entradaPorTeclado.next();
+
+        System.out.println("2. Nombre del invitado");
+        objetoInvitado.nombre=entradaPorTeclado.next();
+
+        System.out.println("3. Apellido del invitado:");
+        objetoInvitado.apellido=entradaPorTeclado.next();
+
+        System.out.println("4. Edad del Invitado:");
+        int edad=entradaPorTeclado.nextInt();
+        if (edad<18){System.out.println("No aceptamos menores de edad");}
+        else {edad=objetoInvitado.edad;}
+
+
+        System.out.println("5.Id del invitado:");
+        objetoInvitado.id=entradaPorTeclado.next();
+
+        System.out.println("6.tipo de Disfraz:");
+        objetoInvitado.disfraz=entradaPorTeclado.next();
+
+        System.out.println("6.Aplica Cover:");
+
+        objetoInvitado.aplicaCover=entradaPorTeclado.nextBoolean();
+
+        System.out.println("7. Valor cover:");
+        if (objetoInvitado.aplicaCover==true) {
+            objetoInvitado.valorCover = entradaPorTeclado.nextDouble();
+        }else {objetoInvitado.valorCover=0;}
+
+        System.out.println("Los datos del Invitados");
+        objetoInvitado.mostrarInvitado();
+
+
+    }
+}

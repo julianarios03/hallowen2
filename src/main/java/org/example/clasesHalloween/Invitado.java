@@ -1,4 +1,4 @@
-package org.example.clasesHalloween;
+ package org.example.clasesHalloween;
 
 public class Invitado {
     //ATRIBUTOS
@@ -8,15 +8,15 @@ public class Invitado {
     public int edad;
     public String id;
     public boolean aplicaCover;
-    public float valorCover;
-    public char disfraz;
+    public double valorCover;
+    public String disfraz;
 
 
     //CONSTRUCTOR
 
     public Invitado() {}
 
-    public Invitado(String nombre, String apellido, int edad, String id, boolean aplicaCover, float valorCover, char disfraz) {
+    public Invitado(String nombre, String apellido, int edad, String id, boolean aplicaCover, double valorCover, String disfraz) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
